@@ -1,11 +1,13 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,fact=1;
-    scanf("%d",&n);
-    for(i=1;i<=n;i++){
-        fact=fact*i;
-    }
-    printf("%d\n",fact);
+    int year;
+    scanf("%d",&year);
+
+    if((year%4==0 && year%100!=0) || year%400==0)
+        printf("Leap Year");
+    else
+        printf("Not Leap Year");
+
     return 0;
 }
